@@ -39,33 +39,10 @@ This will process test cases comparing different report card PDFs and output the
 
 ## API Key Configuration
 
-The application automatically loads the Google API key from the `.env` file using python-dotenv. The API key is used to authenticate with Google's Gemini AI model through the Google ADK (Agent Development Kit).
+The application automatically loads the Google API key from the `.env` file using python-dotenv. The API key is used to authenticate with Google's Gemini AI model through the Google ADK.
 
 ## Dependencies
 
 - `google-adk`: For AI-powered document analysis using Google Gemini
 - `python-dotenv`: For loading environment variables from .env file
-      "pagination_correct": true|false,
-      "content_consistent": true|false,
-      "errors": "Error message or null"
-    },
-    "file_2_validation": {
-      "is_report_card": true|false,
-      "pagination_correct": true|false,
-      "content_consistent": true|false,
-      "errors": "Error message or null"
-    }
-  }
-}
-```
 
-## Dependencies
-
-- `pypdf`: For extracting text from PDF files
-- `google.adk.agents`: For the LLM-based implementation (only needed for the src version)
-
-## Project Status
-
-This project provides two complete implementations for report card validation:
-1. A direct Python approach for deterministic validation
-2. An AI-assisted approach for more nuanced content analysis
